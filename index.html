@@ -3,7 +3,8 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Library Project</title>
+    <title>Clay's Library Project</title>
+    <script src="app.js" defer></script>
   </head>
   <body>
     <main
@@ -15,36 +16,42 @@
       "
     >
       <div>
-        <h1>Library Project</h1>
+        <h1>Clay's Library</h1>
         <div id="library">
           <!-- Add table here -->
-          <table id="table" style="min-width: 680px; margin: 2rem">
+          <table id="table">
             <thead>
               <tr>
                 <th>Title</th>
                 <th>Author</th>
                 <th>Read</th>
+                <th>Remove</th>
               </tr>
             </thead>
-            <tbody>
-              <tr>
-                <td>Name of the Wind</td>
-                <td>Patrick Rothfuss</td>
-                <td>
-                  <input
-                    type="checkbox"
-                    name="read"
-                    id="readLibraryCheckbox"
-                    checked
-                    disabled
-                  />
-                </td>
-              </tr>
+            <tbody id="tableBody">
             </tbody>
           </table>
         </div>
+        <div>
+          <div>
+            <div>
+              <label for="title">Title</label><br>
+              <input id="title" type="text" name="title" value="" required/>
+            </div>
+            <div>
+              <label for="author">Author</label><br>
+              <input id="author" type="text" name="author" value="" required />
+            </div>
+            <div>
+              <label for="read">Read</label>
+              <input id="read" type="checkbox" name="read" />
+            </div>
+            <div>
+              <input id="addBook" type="submit">
+            </div>
+          </div>
+        </div>
+      </div>
     </main>
-
-    <script src="app.js"></script>
   </body>
 </html>
